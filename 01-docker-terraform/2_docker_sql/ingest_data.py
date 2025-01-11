@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import os
+import gzip
 import argparse
 
 from time import time
@@ -13,20 +14,25 @@ from sqlalchemy import create_engine
 def main(params):
     user = params.user
     password = params.password
-    host = params.host 
-    port = params.port 
+    host = params.host
+    port = params.port
     db = params.db
     table_name = params.table_name
     url = params.url
     
     # the backup files are gzipped, and it's important to keep the correct extension
     # for pandas to be able to open the file
+    
+    csv_name_gz = 'output.csv.gz'
+    csv_name = 'output.csv'
+
+    os.system(f"wget {url} -O {csv_name_gz}")
+    os.system(f"gunzip {csv_name_gz} -O {csv_name}")
+
     if url.endswith('.csv.gz'):
         csv_name = 'output.csv.gz'
     else:
-        csv_name = 'output.csv'
-
-    os.system(f"wget {url} -O {csv_name}")
+       csv_name = 'output.csv'
 
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
@@ -39,7 +45,7 @@ def main(params):
 
     df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
 
-    df.to_sql(name=table_name, con=engine, if_exists='append')
+    #df.to_sql(name=table_name, con=engine, if_exists='append')
 
 
     while True: 
