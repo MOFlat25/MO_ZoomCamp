@@ -2,8 +2,8 @@
 
 
 ## Question 1: Understanding Docker First Run
-### Run docker with the ```puthon:3.12.8``` image in an interactive mode, use the entrypoint ```bash```.
-### What's the version of ```pip``` in the image?
+#### Run docker with the ```puthon:3.12.8``` image in an interactive mode, use the entrypoint ```bash```.
+#### What's the version of ```pip``` in the image?
 
 Answer: 24.3.1
 
@@ -15,7 +15,7 @@ pip --version
 ```
 
 ## Question 2: Understanding Docker Networking and docker-compose
-### Given the following docker-compose.yaml, what is the hostname and port that pgadmin should use to connect ### to the postgres database?
+#### Given the following docker-compose.yaml, what is the hostname and port that pgadmin should use to connect to the postgres database?
 
 Answer: db:5432
 
@@ -54,7 +54,7 @@ volumes:
 
 
 ## Question 3: Trip Segmentation Count
-### During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive), how many trips, ###respectively, happened:
+#### During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive), how many trips respectively, happened:
 1. Up to 1 mile
 2. In between 1 (exclusive) and 3 miles (inclusive),
 3. In between 3 (exclusive) and 7 miles (inclusive),
@@ -114,7 +114,7 @@ where
 
 ```
 ## Question 4: Longest Trip for Each Day
-### Which was the pick-up day with the longest trip distance? Use the pick-up time for your calculations.
+#### Which was the pick-up day with the longest trip distance? Use the pick-up time for your calculations.
 *Tip: For every day, we only care about one single trip with the longest distance.*
 
 Answer: 11 October 2019 was the day with the longest trip distance out of the 4 dates, with a trip distance of 95.78 miles.
@@ -139,7 +139,7 @@ order by
 ```
 
 ## Question 5: Three Biggest Pick-Up Zones
-### Which were the top pick-up locations with over 13,000 in ```total_amount``` (across all trips) for 2019-10-18? 
+#### Which were the top pick-up locations with over 13,000 in ```total_amount``` (across all trips) for 2019-10-18? 
 *Consider only ```lpep_pickup_datetime``` when filtering by date.*
 
 Answer: The top 3 pick-up locations with over $13,000 in ```total_amount``` were East Harlem North (approx $18,686.68), East Harlem South (approx $16,797.26), and Morningside Heights (approx $13,029.79).
@@ -167,7 +167,7 @@ order by
 ```
 
 ## Question 6: Largest Tip
-### For the passenger picked up in October 2019 in the zone named "East Harlem North," which was the drop-off zone that had the largest tip? 
+#### For the passenger picked up in October 2019 in the zone named "East Harlem North," which was the drop-off zone that had the largest tip? 
 *We need the zone, not the ID.*
 
 Answer: JFK Airport. The tip was $87.30.
