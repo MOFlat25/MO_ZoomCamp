@@ -12,7 +12,7 @@ docker run -it \
   -v /"$(pwd)"/ny_taxi_postgres_data:/var/lib/postgresql/data \
   -p 5432:5432 \
   --network=pg-network \
-  --name pg-database \
+  --name pgdatabase \
   postgres:13
 
 
@@ -26,6 +26,7 @@ docker run -it \
   dpage/pgadmin4
 
 
+## run docker image & import yellow taxi trips data
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 
 docker run -it \
@@ -33,8 +34,38 @@ docker run -it \
   taxi_ingest:v001 \
   --user=root \
   --password=root \
-  --host=pg-database \
+  --host=pgdatabase \
   --port=5432 \
   --db=ny_taxi \
   --table_name=yellow_taxi_trips \
+  --url="${URL}"
+
+
+## run docker image & import green taxi trips data
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
+    
+docker run -it \
+  --network=pg-network \
+  taxi_ingest:v002 \
+  --user=root \
+  --password=root \
+  --host=pgdatabase \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=green_taxi_trips \
+  --url="${URL}"
+
+
+## run docker image & import taxi zone look-up table
+URL="https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
+
+docker run -it \
+  --network=pg-network \
+  taxi_dict:v001 \
+  --user=root \
+  --password=root \
+  --host=pgdatabase \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=taxi_lookup \
   --url="${URL}"
