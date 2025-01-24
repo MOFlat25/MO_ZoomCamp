@@ -240,6 +240,6 @@ where
 Answer:
 ```
     1. terraform init 
-    2. terraform apply -auto apply 
+    2. terraform apply -auto-approve
     3. terraform destroy 
 ```
