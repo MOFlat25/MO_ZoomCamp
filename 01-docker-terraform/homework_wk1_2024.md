@@ -1,7 +1,8 @@
 # Week One Homework 2024
 
 ## Question 1: Knowing Docker Tags
-### Which docker tag has the following text? *-Automatically remove the container when it exits*
+### Which docker tag has the following text?: 
+*-Automatically remove the container when it exits*
 
 Answer: rm
 
@@ -113,7 +114,7 @@ order by
 
 ## Question 6: Largest Tip 
 ### For the passengers picked up in September 2019 in the zone name Astoria, which was the drop-off zone that had the largest tip? 
-* We want the name of the zone, not the id. *
+*We want the name of the zone, not the id.*
 
 Answer: Woodside (data must have been updated). The largest tip in September 2019 
     from pick-up zone Astoria was $30 going to drop-off zone Woodside.
