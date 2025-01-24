@@ -56,18 +56,18 @@ volumes:
 ## Question 3: Trip Segmentation Count
 ### During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive), how many trips, ###respectively, happened:
 
-#### 1. Up to 1 mile
-#### 2. In between 1 (exclusive) and 3 miles (inclusive),
-#### 3. In between 3 (exclusive) and 7 miles (inclusive),
-#### 4. In between 7 (exclusive) and 10 miles (inclusive),
-#### 5. Over 10 miles
+##### 1. Up to 1 mile
+##### 2. In between 1 (exclusive) and 3 miles (inclusive),
+##### 3. In between 3 (exclusive) and 7 miles (inclusive),
+##### 4. In between 7 (exclusive) and 10 miles (inclusive),
+##### 5. Over 10 miles
 
-Answer:
-    1. Up to 1 mile: 78,964
-    2. In between 1 (exclusive) & 3 miles (inclusive): 150,850
-    3. In between 3 (exclusive) & 7 miles (inclusive): 90,020
-    4. In between 7 (exclusive) & 10 miles (inclusive): 24,074
-    5. Over 10 miles: 32,294
+Answer: <br>
+    1. Up to 1 mile: 78,964 <br>
+    2. In between 1 (exclusive) & 3 miles (inclusive): 150,850 <br>
+    3. In between 3 (exclusive) & 7 miles (inclusive): 90,020 <br>
+    4. In between 7 (exclusive) & 10 miles (inclusive): 24,074 <br>
+    5. Over 10 miles: 32,294 <br>
 
 SQL Code
 
@@ -233,14 +233,14 @@ where
 ```
 
 ## Question 7: Terraform Workflow
-### Which of the following sequences, respectively, describe the workflow for:
-####    1. Downloading the provider plugins and setting up backend.
-####    2. Generating proposed changes and auto-executing the plan.
-####    3. Remove all resources managed by terraform.
+#### Which of the following sequences, respectively, describe the workflow for:
+#####    1. Downloading the provider plugins and setting up backend.
+#####    2. Generating proposed changes and auto-executing the plan.
+#####    3. Remove all resources managed by terraform.
 
 Answer:
-```
-    1. terraform init
-    2. terraform apply -auto apply
-    3. terraform destroy
-```
+
+    1. terraform init <br>
+    2. terraform apply -auto apply <br>
+    3. terraform destroy <br>
+
