@@ -238,8 +238,8 @@ where
 3. Remove all resources managed by terraform.
 
 Answer:
-
-    1. terraform init <br>
-    2. terraform apply -auto apply <br>
-    3. terraform destroy <br>
-
+```
+    1. terraform init 
+    2. terraform apply -auto apply 
+    3. terraform destroy 
+```
