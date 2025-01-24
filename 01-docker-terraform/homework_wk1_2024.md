@@ -37,7 +37,9 @@ Answer: 15,612 trips were started and completed on 18 September 2019.
 SQL Code:
 ```
 -- There are no null fields in the datetime fields and we use a 
--- 		where filter, so we can use count(*) instead of count(column_name)
+-- where filter, so we can use count(*) instead of count(column_name)
+
+
 select
 	cast(lpep_pickup_datetime as date) as pick_up_time,
 	cast(lpep_dropoff_datetime as date) as drop_off_time,
@@ -110,9 +112,8 @@ order by
 
 
 ## Question 6: Largest Tip 
-### For the passengers picked up in September 2019 in the zone name Astoria, 
-### which was the drop-off zone that had the largest tip? 
-### We want the name of the zone, not the id.
+### For the passengers picked up in September 2019 in the zone name Astoria, which was the drop-off zone that had the largest tip? 
+* We want the name of the zone, not the id. *
 
 Answer: Woodside (data must have been updated). The largest tip in September 2019 
     from pick-up zone Astoria was $30 going to drop-off zone Woodside.
